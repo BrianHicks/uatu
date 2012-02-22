@@ -1,0 +1,4 @@
+test:
+  in: .+\.py
+  transform: tests/%s
+  command: nosetests

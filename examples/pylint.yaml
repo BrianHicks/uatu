@@ -1,0 +1,3 @@
+lint:
+  in: .+\.py
+  command: pylint -r n
