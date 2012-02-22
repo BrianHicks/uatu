@@ -1,10 +1,10 @@
 test:
-  in: .+\.py
+  watch: .+\.py
   transform: tests/%s
   command: nosetests
   success: test-all
   failure: notify-send "Test Failure" %s # substituion will be transformed filename
 
 test-all:
-  in: .+\.py
+  watch: .+\.py
   command: nosetests

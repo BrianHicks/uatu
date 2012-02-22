@@ -4,7 +4,7 @@ Put this in your pipe (`uatu.yaml`):
 
 ```yaml
 test:
-  in: .+\.py
+  watch: .+\.py
   transform: tests/%s
   command: nosetests
 ```
@@ -17,12 +17,12 @@ Or, slightly more advanced:
 
 ```yaml
 test:
-  in: (?P<path>.+)/(?P<file>.+)\.py
+  watch: (?P<path>.+)/(?P<file>.+)\.py
   transform: %(path)s/tests/%(file)s_tests.py
   command: nosetests
 
 lint:
-  in: .+\.py
+  watch: .+\.py
   command: pylint -r n
 ```
 
